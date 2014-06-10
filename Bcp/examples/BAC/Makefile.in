@@ -1,0 +1,100 @@
+# Copyright (C) 2006 International Business Machines and others.
+# All Rights Reserved.
+# This file is distributed under the Common Public License.
+
+# $Id$
+
+##########################################################################
+#    You can modify this example makefile to fit for your own program.   #
+#    Usually, you only need to change the five CHANGEME entries below.   #
+##########################################################################
+
+# CHANGEME: add extra definitions here
+USER_DEFINES =
+
+# Possibilities: 
+#                -DHEUR_SOL :      generate heuristic solutions
+#                -DCUSTOM_BRANCH : branch on first non integer variable
+#                -DUSER_DATA :     define data associated with each node
+#
+
+# CHANGEME: This should be the name of your executable
+EXE = bac@EXEEXT@
+
+# CHANGEME: Here is the name of all object files corresponding to the source
+#           code that you wrote in order to define the problem statement
+OBJS = \
+	./LP/BB_lp.@OBJEXT@ \
+	./TM/BB_tm.@OBJEXT@ \
+	./Member/BB_user_data.@OBJEXT@ \
+	./Member/BB_packer.@OBJEXT@ \
+	./Member/BB_init.@OBJEXT@ \
+	./Member/BB.@OBJEXT@ \
+	./Member/BB_cut.@OBJEXT@
+
+# CHANGEME: Additional include directories for compilation. Note that no
+# include directory needs to be listed here for headers from COIN.
+USER_INCDIRS = include
+
+##########################################################################
+#  Usually, you don't have to change anything below.  Note that if you   #
+#  change certain compiler options, you might have to recompile the      #
+#  BCP package.                                                          #
+##########################################################################
+
+COIN_HAS_PKGCONFIG = @COIN_HAS_PKGCONFIG_TRUE@TRUE
+COIN_CXX_IS_CL = @COIN_CXX_IS_CL_TRUE@TRUE
+
+# C++ Compiler command
+CXX = @CXX@
+
+# C++ Compiler options
+CXXFLAGS = $(CYGFLAG) @CXXFLAGS@ $(USER_DEFINES)
+
+# additional C++ Compiler options for linking
+CXXLINKFLAGS = @RPATH_FLAGS@
+
+# Include directories (we use the CYGPATH_W variables to allow compilation with Windows compilers)
+ifeq ($(COIN_HAS_PKGCONFIG), TRUE)
+  INCL = `PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@ @PKG_CONFIG@ --cflags bcp cgl`
+else
+  INCL = @BCPLIB_CFLAGS_INSTALLED@ @BAC_CFLAGS_INSTALLED@
+endif
+INCL += $(ADDINCFLAGS)
+
+# Linker flags
+ifeq ($(COIN_HAS_PKGCONFIG), TRUE)
+  LIBS = `PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@ @PKG_CONFIG@ --libs bcp cgl`
+else
+  ifeq ($(COIN_CXX_IS_CL), TRUE)
+    LIBS = -link -libpath:`$(CYGPATH_W) @abs_lib_dir@` libBcp.lib @BAC_LIBS_INSTALLED@ @BCPLIB_LIBS_INSTALLED@
+  else
+    LIBS = -L@abs_lib_dir@ -lBcp @BAC_LIBS_INSTALLED@ @BCPLIB_LIBS_INSTALLED@
+  endif
+endif
+
+# The following is necessary under cygwin, if native compilers are used
+CYGPATH_W = @CYGPATH_W@
+
+# Necessary Include dirs (we use the CYGPATH_W variables to allow
+# compilation with Windows compilers)
+INCL += `for i in $(USER_INCDIRS); do $(CYGPATH_W) $$i | sed -e 's/^/-I/'; done`
+
+all: $(EXE)
+
+.SUFFIXES: .cpp .c .o .obj
+
+$(EXE): $(OBJS)
+	bla=;\
+	for file in $(OBJS); do bla="$$bla `$(CYGPATH_W) $$file`"; done; \
+	$(CXX) $(CXXLINKFLAGS) $(CXXFLAGS) -o $@ $$bla $(ADDLIBS) $(LIBS)
+
+clean:
+	rm -rf $(EXE) $(OBJS)
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) $(INCL) -c -o $@ `test -f '$<' || echo '$(SRCDIR)/'`$<
+
+
+.cpp.obj:
+	$(CXX) $(CXXFLAGS) $(INCL) -c -o $@ `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(SRCDIR)/$<'; fi`

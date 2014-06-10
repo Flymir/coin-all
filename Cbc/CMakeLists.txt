@@ -1,0 +1,8 @@
+set(CBC_VERSION_MAJOR 2 CACHE INTEGER "Clp version major")
+set(CBC_VERSION_MINOR 7 CACHE INTEGER "Clp version minor")
+set(CBC_VERSION_RELEASE 5 CACHE INTEGER "Clp version revision")
+set(CBC_VERSION "${CBC_VERSION_MAJOR}.${CBC_VERSION_MINOR}.${CBC_VERSION_RELEASE}")
+set(CBC_CHECKLEVEL 0 CACHE INTEGER "Cbc check level")
+set(CBC_VERBOSITY 0 CACHE INTEGER "Cbc verbosity")
+
+add_subdirectory(src)

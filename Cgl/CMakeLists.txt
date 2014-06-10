@@ -1,0 +1,8 @@
+set(CGL_VERSION_MAJOR 1 CACHE INTEGER "Cgl version major")
+set(CGL_VERSION_MINOR 14 CACHE INTEGER "Cgl version minor")
+set(CGL_VERSION_RELEASE 5 CACHE INTEGER "Cgl version revision")
+set(CGL_VERSION "${CLP_VERSION_MAJOR}.${CLP_VERSION_MINOR}.${CLP_VERSION_RELEASE}")
+set(CGL_CHECKLEVEL 0 CACHE INTEGER "CGL check level")
+set(CGL_VERBOSITY 0 CACHE INTEGER "CGL verbosity")
+
+add_subdirectory(src)

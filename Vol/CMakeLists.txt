@@ -1,0 +1,8 @@
+set(VOL_VERSION_MAJOR 1 CACHE INTEGER "Vol version major")
+set(VOL_VERSION_MINOR 3 CACHE INTEGER "Vol version minor")
+set(VOL_VERSION_RELEASE 2 CACHE INTEGER "Vol version revision")
+set(VOL_VERSION "${VOL_VERSION_MAJOR}.${VOL_VERSION_MINOR}.${VOL_VERSION_RELEASE}")
+set(COIN_VOL_CHECKLEVEL 0 CACHE INTEGER "Vol check level")
+set(COIN_VOL_VERBOSITY 0 CACHE INTEGER "Vol verbosity")
+
+add_subdirectory(src)

@@ -1,0 +1,8 @@
+set(CLP_VERSION_MAJOR 1 CACHE INTEGER "Clp version major")
+set(CLP_VERSION_MINOR 14 CACHE INTEGER "Clp version minor")
+set(CLP_VERSION_RELEASE 5 CACHE INTEGER "Clp version revision")
+set(CLP_VERSION "${CLP_VERSION_MAJOR}.${CLP_VERSION_MINOR}.${CLP_VERSION_RELEASE}")
+set(CLP_CHECKLEVEL 0 CACHE INTEGER "Clp check level")
+set(CLP_VERBOSITY 0 CACHE INTEGER "Clp verbosity")
+
+add_subdirectory(src)

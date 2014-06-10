@@ -1,0 +1,13 @@
+/* src/config_cbc.h.in. */
+
+/* Version number of project */
+#cmakedefine CBC_VERSION "@CBC_VERSION@"
+
+/* Major Version number of project */
+#cmakedefine CBC_VERSION_MAJOR @CBC_VERSION_MAJOR@
+
+/* Minor Version number of project */
+#cmakedefine CBC_VERSION_MINOR @CBC_VERSION_MINOR@
+
+/* Release Version number of project */
+#cmakedefine CBC_VERSION_RELEASE @CBC_VERSION_RELEASE@

@@ -1,0 +1,14 @@
+--- This file is part of Flymir LuaDist project
+
+name = "coin-all"
+version = "1.6.0"
+
+desc = "COIN-OR projects"
+author = "COIN-OR"
+license = "MIT/X11"
+url = "http://www.glfw.org/"
+maintainer = "Tai Chi Minh Ralph Eastwood"
+
+depends = {
+	"lapack"
+}

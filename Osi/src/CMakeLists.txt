@@ -1,0 +1,8 @@
+add_subdirectory(Osi)
+add_subdirectory(OsiCommonTest)
+#add_subdirectory(OsiCpx)
+#add_subdirectory(OsiGlpk)
+#add_subdirectory(OsiGrb)
+#add_subdirectory(OsiMsk)
+#add_subdirectory(OsiSpx)
+#add_subdirectory(OsiXpr)

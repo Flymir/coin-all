@@ -1,0 +1,166 @@
+/* src/config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define to the name of the default solver to be used in cbc-generic in small
+   letters */
+#cmakedefine CBC_DEFAULT_SOLVER @CBC_DEFAULT_SOLVER@
+
+/* SVN revision number of project */
+#cmakedefine CBC_SVN_REV @CBC_SVN_REV@
+
+/* Define to 1 if the SMP version of Cbc should be compiled */
+#cmakedefine CBC_THREAD @CBC_THREAD@
+
+/* Version number of project */
+#cmakedefine CBC_VERSION "@CBC_VERSION@"
+
+/* Major Version number of project */
+#cmakedefine CBC_VERSION_MAJOR @CBC_VERSION_MAJOR@
+
+/* Minor Version number of project */
+#cmakedefine CBC_VERSION_MINOR @CBC_VERSION_MINOR@
+
+/* Release Version number of project */
+#cmakedefine CBC_VERSION_RELEASE @CBC_VERSION_RELEASE@
+
+/* Define to the debug sanity check level (0 is no test) */
+#cmakedefine COIN_CBC_CHECKLEVEL @COIN_CBC_CHECKLEVEL@
+
+/* Define to the debug verbosity level (0 is no output) */
+#cmakedefine COIN_CBC_VERBOSITY @COIN_CBC_VERBOSITY@
+
+/* Define to 1 if the ASL package is available */
+#cmakedefine COIN_HAS_ASL @COIN_HAS_ASL@
+
+/* Define to 1 if the Clp package is available */
+#cmakedefine COIN_HAS_CLP @COIN_HAS_CLP@
+
+/* Define to 1 if the CoinDepend package is available */
+#cmakedefine COIN_HAS_COINDEPEND @COIN_HAS_COINDEPEND@
+
+/* Define to 1 if the Cpx package is available */
+#cmakedefine COIN_HAS_CPX @COIN_HAS_CPX@
+
+/* Define to 1 if the DyLP package is available */
+#cmakedefine COIN_HAS_DYLP @COIN_HAS_DYLP@
+
+/* Define to 1 if the Glpk package is available */
+#cmakedefine COIN_HAS_GLPK @COIN_HAS_GLPK@
+
+/* Define to 1 if the Grb package is available */
+#cmakedefine COIN_HAS_GRB @COIN_HAS_GRB@
+
+/* Define to 1 if the Miplib3 package is available */
+#cmakedefine COIN_HAS_MIPLIB3 @COIN_HAS_MIPLIB3@
+
+/* Define to 1 if the Msk package is available */
+#cmakedefine COIN_HAS_MSK @COIN_HAS_MSK@
+
+/* Define to 1 if the Netlib package is available */
+#cmakedefine COIN_HAS_NETLIB @COIN_HAS_NETLIB@
+
+/* Define to 1 if the OsiTests package is available */
+#cmakedefine COIN_HAS_OSITESTS @COIN_HAS_OSITESTS@
+
+/* Define to 1 if readline is available */
+#cmakedefine COIN_HAS_READLINE @COIN_HAS_READLINE@
+
+/* Define to 1 if the Sample package is available */
+#cmakedefine COIN_HAS_SAMPLE @COIN_HAS_SAMPLE@
+
+/* Define to 1 if the Spx package is available */
+#cmakedefine COIN_HAS_SPX @COIN_HAS_SPX@
+
+/* Define to 1 if the Vol package is available */
+#cmakedefine COIN_HAS_VOL @COIN_HAS_VOL@
+
+/* Define to 1 if the Xpr package is available */
+#cmakedefine COIN_HAS_XPR @COIN_HAS_XPR@
+
+/* Define to 1 if you have the <cfloat> header file. */
+#cmakedefine HAVE_CFLOAT @HAVE_CFLOAT@
+
+/* Define to 1 if you have the <cieeefp> header file. */
+#cmakedefine HAVE_CIEEEFP @HAVE_CIEEEFP@
+
+/* Define if clock_gettime and rt library is available */
+#cmakedefine HAVE_CLOCK_GETTIME @HAVE_CLOCK_GETTIME@
+
+/* Define to 1 if you have the <cmath> header file. */
+#cmakedefine HAVE_CMATH @HAVE_CMATH@
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#cmakedefine HAVE_DLFCN_H @HAVE_DLFCN_H@
+
+/* Define to 1 if you have the <float.h> header file. */
+#cmakedefine HAVE_FLOAT_H @HAVE_FLOAT_H@
+
+/* Define to 1 if you have the <ieeefp.h> header file. */
+#cmakedefine HAVE_IEEEFP_H @HAVE_IEEEFP_H@
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#cmakedefine HAVE_INTTYPES_H @HAVE_INTTYPES_H@
+
+/* Define to 1 if you have the <math.h> header file. */
+#cmakedefine HAVE_MATH_H @HAVE_MATH_H@
+
+/* Define to 1 if you have the <memory.h> header file. */
+#cmakedefine HAVE_MEMORY_H @HAVE_MEMORY_H@
+
+/* Define to 1 if you have the <readline/readline.h> header file. */
+#cmakedefine HAVE_READLINE_READLINE_H @HAVE_READLINE_READLINE_H@
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#cmakedefine HAVE_STDINT_H @HAVE_STDINT_H@
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#cmakedefine HAVE_STDLIB_H @HAVE_STDLIB_H@
+
+/* Define to 1 if you have the <strings.h> header file. */
+#cmakedefine HAVE_STRINGS_H @HAVE_STRINGS_H@
+
+/* Define to 1 if you have the <string.h> header file. */
+#cmakedefine HAVE_STRING_H @HAVE_STRING_H@
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#cmakedefine HAVE_SYS_STAT_H @HAVE_SYS_STAT_H@
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#cmakedefine HAVE_SYS_TYPES_H @HAVE_SYS_TYPES_H@
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#cmakedefine HAVE_UNISTD_H @HAVE_UNISTD_H@
+
+/* define to the name of the default solver interface class, e.g.,
+   OsiClpSolverInterface */
+#cmakedefine OSICBC_DFLT_SOLVER @OSICBC_DFLT_SOLVER@
+
+/* define this symbol if clp is the default solver */
+#cmakedefine OSICBC_DFLT_SOLVER_CLP @OSICBC_DFLT_SOLVER_CLP@
+
+/* define to the name of the .hpp file for the default solver interface class,
+   e.g., "OsiClpSolverInterface.hpp" (include quotes) */
+#cmakedefine OSICBC_DFLT_SOLVER_HPP @OSICBC_DFLT_SOLVER_HPP@
+
+/* Name of package */
+#cmakedefine PACKAGE @PACKAGE@
+
+/* Define to the address where bug reports for this package should be sent. */
+#cmakedefine PACKAGE_BUGREPORT @PACKAGE_BUGREPORT@
+
+/* Define to the full name of this package. */
+#cmakedefine PACKAGE_NAME @PACKAGE_NAME@
+
+/* Define to the full name and version of this package. */
+#cmakedefine PACKAGE_STRING @PACKAGE_STRING@
+
+/* Define to the one symbol short name of this package. */
+#cmakedefine PACKAGE_TARNAME @PACKAGE_TARNAME@
+
+/* Define to the version of this package. */
+#cmakedefine PACKAGE_VERSION @PACKAGE_VERSION@
+
+/* Define to 1 if you have the ANSI C header files. */
+#cmakedefine STDC_HEADERS @STDC_HEADERS@
+
+/* Version number of package */
+#cmakedefine VERSION @VERSION@

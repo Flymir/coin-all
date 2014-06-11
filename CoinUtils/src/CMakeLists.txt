@@ -134,7 +134,7 @@ set(COIN_UTILS_HEADERS
 	CoinTime.hpp 
 	CoinTypes.hpp 
 	CoinUtility.hpp 
-	CoinUtilsConfig.hpp 
+	CoinUtilsConfig.h 
 	CoinWarmStart.hpp 
 	CoinWarmStartBasis.hpp 
 	CoinWarmStartVector.hpp 

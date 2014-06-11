@@ -83,6 +83,7 @@ set(COIN_UTILS_SOURCES
 
 set(COIN_UTILS_HEADERS
 	Coin_C_defines.h 
+	coin_coinutils_default.h
 	CoinAlloc.hpp 
 	CoinBuild.hpp 
 	CoinDenseVector.hpp 

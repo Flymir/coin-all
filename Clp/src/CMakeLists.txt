@@ -57,6 +57,7 @@ set(CLP_SOURCES
 set(CLP_HEADERS
 	Clp_C_Interface.h 
 	ClpConfig.h
+	config_clp_default.h
 	ClpCholeskyBase.hpp 
 	ClpCholeskyDense.hpp 
 	ClpConstraint.hpp 

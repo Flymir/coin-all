@@ -91,6 +91,8 @@ set(CBCSOLVER_SOURCES
 
 set(CBC_HEADERS
 	Cbc_C_Interface.h 
+	CbcConfig.h
+	config_cbc_default.h
 	CbcBranchActual.hpp 
 	CbcBranchAllDifferent.hpp 
 	CbcBranchBase.hpp 
